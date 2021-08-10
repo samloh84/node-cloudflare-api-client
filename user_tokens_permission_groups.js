@@ -1,6 +1,5 @@
 const Promise = require('bluebird');
 Promise.config({longStackTraces: true, warnings: true})
-const _ = require('lodash');
 
 
 class CloudflareUserTokensPermissionGroupsApi {

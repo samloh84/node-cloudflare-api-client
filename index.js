@@ -3,6 +3,8 @@ Promise.config({longStackTraces: true, warnings: true})
 const axios = require('axios');
 const _ = require('lodash');
 const CloudflareAccountsApi = require("./accounts");
+const CloudflareInvitesApi = require("./invites");
+const CloudflareMembershipsApi = require("./memberships");
 const {deepResolve, serializeAsFormData} = require('./util');
 
 

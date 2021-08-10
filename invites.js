@@ -1,7 +1,6 @@
 const Promise = require('bluebird');
 Promise.config({longStackTraces: true, warnings: true})
 const _ = require('lodash');
-const CloudflareInvitesTokenApi = require("./invites_tokens");
 
 
 class CloudflareInvitesApi {
