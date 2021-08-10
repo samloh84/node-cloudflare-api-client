@@ -6,7 +6,6 @@ const _ = require('lodash');
 class CloudflareAccountMembersApi {
     constructor(api) {
         this._api = api;
-        this.tokens = new CloudflareAccountsTokenApi(api);
     }
 
 
