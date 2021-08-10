@@ -5,13 +5,13 @@ const _ = require('lodash');
 const CloudflareAccountsApi = require("./accounts");
 const CloudflareInvitesApi = require("./invites");
 const CloudflareMembershipsApi = require("./memberships");
-const {deepResolve, serializeAsFormData} = require('./util');
+const {deepResolve} = require('./util');
 
 
 class CloudflareApi {
     constructor(params) {
         this._token = _.get(params, 'token');
-        this._api_base = _.get(params, 'api_base', 'https://api.cloudflare.com/client/v4/');
+        this._api_base = _.get(params, 'api_base', 'https://api.cloudflare.com/client/v4');
         this.accounts = new CloudflareAccountsApi(this);
         this.invites = new CloudflareInvitesApi(this);
         this.memberships = new CloudflareMembershipsApi(this);
@@ -82,11 +82,7 @@ class CloudflareApi {
 
         return deepResolve(data)
             .then(function (resolvedData) {
-                return serializeAsFormData(resolvedData);
-            })
-            .then(function (serializedData) {
-                _.set(config, 'headers', _.assign({}, _.get(config, 'headers', {}), serializedData.getHeaders()));
-                return Promise.resolve(axios.post(url, serializedData, config));
+                return Promise.resolve(axios.post(url, resolvedData, config));
             })
             .then(function (response) {
                 return response.data;
@@ -107,11 +103,7 @@ class CloudflareApi {
 
         return deepResolve(data)
             .then(function (resolvedData) {
-                return serializeAsFormData(resolvedData);
-            })
-            .then(function (serializedData) {
-                _.set(config, 'headers', _.assign({}, _.get(config, 'headers', {}), serializedData.getHeaders()));
-                return Promise.resolve(axios.put(url, serializedData, config));
+                return Promise.resolve(axios.put(url, resolvedData, config));
             })
             .then(function (response) {
                 return response.data;
@@ -132,11 +124,7 @@ class CloudflareApi {
 
         return deepResolve(data)
             .then(function (resolvedData) {
-                return serializeAsFormData(resolvedData);
-            })
-            .then(function (serializedData) {
-                _.set(config, 'headers', _.assign({}, _.get(config, 'headers', {}), serializedData.getHeaders()));
-                return Promise.resolve(axios.patch(url, serializedData, config));
+                return Promise.resolve(axios.patch(url, resolvedData, config));
             })
             .then(function (response) {
                 return response.data;
