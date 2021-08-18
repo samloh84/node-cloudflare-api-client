@@ -5,6 +5,7 @@ const _ = require('lodash');
 const CloudflareAccountsApi = require("./accounts");
 const CloudflareInvitesApi = require("./invites");
 const CloudflareMembershipsApi = require("./memberships");
+const CloudflareZonesApi = require("./zones");
 const {deepResolve} = require('./util');
 
 
@@ -15,6 +16,7 @@ class CloudflareApi {
         this.accounts = new CloudflareAccountsApi(this);
         this.invites = new CloudflareInvitesApi(this);
         this.memberships = new CloudflareMembershipsApi(this);
+        this.zones = new CloudflareZonesApi(this);
     }
 
     get api_base() {
