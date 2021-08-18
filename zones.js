@@ -8,7 +8,7 @@ class CloudflareZonesApi {
     constructor(api) {
         this._api = api;
 
-        this.settings = new CloudflareZoneSettingsApi()
+        this.settings = new CloudflareZoneSettingsApi(api);
     }
 
 
