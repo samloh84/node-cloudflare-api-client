@@ -62,6 +62,29 @@ class CloudflareAccountTeamsRulesApi {
     }
 
 
+    list_app_types(account_id) {
+        let api = this._api;
+
+        let url_slug = `accounts/${account_id}/app_types`;
+        return api._get(url_slug);
+    }
+
+
+    list_locations(account_id) {
+        let api = this._api;
+
+        let url_slug = `accounts/${account_id}/locations`;
+        return api._get(url_slug);
+    }
+
+    list_categories(account_id) {
+        let api = this._api;
+
+        let url_slug = `accounts/${account_id}/categories`;
+        return api._get(url_slug);
+    }
+
+
 }
 
 module.exports = CloudflareAccountTeamsRulesApi;
