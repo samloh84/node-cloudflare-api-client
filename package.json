@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/samloh84/node-cloudflare-client.git",
   "author": "Samuel Loh Yin Kang <samuel.loh.yk@gmail.com>",
   "license": "MIT",
   "dependencies": {
