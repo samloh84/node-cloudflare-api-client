@@ -1,17 +1,15 @@
 {
-  "name": "cloudflare",
-  "version": "1.0.0",
+  "name": "@samloh84/node-cloudflare-api-client",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Samuel Loh Yin Kang <samuel.loh.yk@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@samloh84/api-client-base": "^1.0.0",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "lodash": "^4.17.21"
