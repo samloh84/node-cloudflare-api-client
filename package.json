@@ -1,5 +1,5 @@
 {
-  "name": "@samloh84/node-cloudflare-api-client",
+  "name": "@samloh84/cloudflare-api-client",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
