@@ -1,18 +1,23 @@
 {
   "name": "@samloh84/cloudflare-api-client",
   "version": "2.0.0",
-  "description": "",
+  "description": "Node.js Cloudflare API Client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/samloh84/node-cloudflare-client.git",
   "author": "Samuel Loh Yin Kang <samuel.loh.yk@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samloh84/node-cloudflare-api-client/issues",
+    "email": "samuel.loh.yk@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/samloh84/node-cloudflare-api-client",
+    "type": "git"
+  },
   "dependencies": {
     "@samloh84/api-client-base": "^1.0.0",
-    "axios": "^0.21.1",
-    "bluebird": "^3.7.2",
     "lodash": "^4.17.21"
   }
 }
